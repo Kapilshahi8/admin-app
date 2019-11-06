@@ -20,21 +20,23 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/box.css') }}" rel="stylesheet" />
     @yield('styles')
 </head>
 
 <body class="app header-fixed sidebar-fixed aside-menu-fixed pace-done sidebar-lg-show">
     <header class="app-header navbar">
         <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"><i class="fas fa-bars text-white"></i></span>
         </button>
         <a class="navbar-brand" href="#">
-            <span class="navbar-brand-full">Project</span>
-            <span class="navbar-brand-minimized">P</span>
+            <span class="navbar-brand-full" style="font-family: 'Pacifico', cursive;">Custom Dashboard</span>
+            <span class="navbar-brand-minimized" style="font-family: 'Pacifico', cursive;">CD</span>
         </a>
         <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"><i class="fas fa-bars text-white"></i></span>
         </button>
 
         <ul class="nav navbar-nav ml-auto">
@@ -58,7 +60,7 @@
         <main class="main">
 
 
-            <div style="padding-top: 20px" class="container-fluid">
+            <div style="padding:20px 5px" class="container-fluid">
 
                 @yield('content')
 

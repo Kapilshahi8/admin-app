@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
 <div class="row justify-content-center">
-    <div class="col-md-8">
+    <div class="col-md-5">
         <div class="card-group">
-            <div class="card p-4">
+            <div class="card p-4 login-card">
                 <div class="card-body">
                     @if(\Session::has('message'))
                         <p class="alert alert-info">
@@ -13,13 +13,11 @@
                     <form method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
                         <h1>
-                            <div class="login-logo">
-                                <a href="#">
-                                    {{ trans('global.site_title') }}
-                                </a>
+                            <div class="login-logo text-center text-white">
+                                {{ trans('global.site_title') }}
                             </div>
                         </h1>
-                        <p class="text-muted">{{ trans('global.login') }}</p>
+                        <p class="text-white ">Enter {{ trans('global.login') }} Credentials</p>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa fa-user"></i></span>
@@ -35,12 +33,12 @@
                         <div class="row">
                             <div class="col-6">
                                 <input type="submit" class="btn btn-primary px-4" value='{{ trans('global.login') }}'>
-                                <label class="ml-2">
+                                <!-- <label class="ml-2">
                                     <input name="remember" type="checkbox" /> {{ trans('global.remember_me') }}
-                                </label>
+                                </label> -->
                             </div>
                             <div class="col-6 text-right">
-                                <a class="btn btn-link px-0" href="{{ route('password.request') }}">
+                                <a class="btn btn-link px-0 text-white" href="{{ route('password.request') }}">
                                     {{ trans('global.forgot_password') }}
                                 </a>
                             </div>

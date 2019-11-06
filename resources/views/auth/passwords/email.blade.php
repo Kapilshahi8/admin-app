@@ -1,20 +1,18 @@
 @extends('layouts.app')
 @section('content')
 <div class="row justify-content-center">
-    <div class="col-md-8">
+    <div class="col-md-5">
         <div class="card-group">
-            <div class="card p-4">
+            <div class="card p-2 login-card">
                 <div class="card-body">
                     <form method="POST" action="{{ route('password.email') }}">
                         {{ csrf_field() }}
                         <h1>
-                            <div class="login-logo">
-                                <a href="#">
-                                    {{ trans('global.site_title') }}
-                                </a>
+                            <div class="login-logo text-center text-white">
+                                {{ trans('Forgot Password') }}
                             </div>
                         </h1>
-                        <p class="text-muted"></p>
+                        <p class="text-white">Please enter registerd email id</p>
                         <div>
                             {{ csrf_field() }}
                             <div class="form-group has-feedback">
@@ -27,10 +25,15 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 text-right">
+                            <div class="col-6 text-right">
                                 <button type="submit" class="btn btn-primary btn-block btn-flat">
                                     {{ trans('global.reset_password') }}
                                 </button>
+                            </div>
+                            <div class="col-6 text-right">
+                            <a class="btn btn-link px-0 text-white" href="{{ route('login') }}">
+                                    {{ trans('Remember Password') }}
+                                </a>
                             </div>
                         </div>
                     </form>
